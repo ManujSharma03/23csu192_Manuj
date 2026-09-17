@@ -1,5 +1,11 @@
 # ✈️ AirResolve AI — Customer-Facing Airline Resolution Agent
 
+## 🔗 Live Demo
+
+**👉 [Try AirResolve AI live](https://23csu192manuj-i6fprzb5xqpkyrxlgaieb2.streamlit.app/) — no setup required, opens directly in your browser.**
+
+---
+
 An agentic AI prototype that behaves like a real airline customer-support resolution agent:
 it identifies the customer, retrieves their booking, applies deterministic airline policy,
 takes (simulated) action or escalates to a human, and keeps a full audit trail — all
@@ -45,7 +51,7 @@ outside its authority.
 
 ## 4. Architecture
 
-Rendered as a Mermaid flowchart below:
+Rendered as a Mermaid flowchart below (GitHub renders this natively — no encoding issues):
 
 ```mermaid
 flowchart TD
