@@ -45,7 +45,7 @@ outside its authority.
 
 ## 4. Architecture
 
-Rendered as a Mermaid flowchart below (GitHub renders this natively — no encoding issues):
+Rendered as a Mermaid flowchart below:
 
 ```mermaid
 flowchart TD
