@@ -1,0 +1,69 @@
+{
+  "bookings": [
+    {
+      "booking_reference": "SK4821X",
+      "customer_id": "priya_nair",
+      "customer_name": "Priya Nair",
+      "flights": [
+        {
+          "flight_number": "SK-204",
+          "route": "Delhi \u2192 Goa",
+          "date": "Wednesday, 23 September 2026",
+          "scheduled_departure": "18:40",
+          "status": "Cancelled",
+          "cause": "Operational reasons (airline-caused)",
+          "delay_hours": null,
+          "new_departure": null,
+          "leg": "outbound"
+        },
+        {
+          "flight_number": "SK-204R",
+          "route": "Goa \u2192 Delhi",
+          "date": "Friday, 25 September 2026",
+          "scheduled_departure": "16:20",
+          "status": "Unaffected",
+          "cause": null,
+          "delay_hours": 0,
+          "new_departure": null,
+          "leg": "return"
+        }
+      ]
+    },
+    {
+      "booking_reference": "TR1190B",
+      "customer_id": "arvind_kulkarni",
+      "customer_name": "Arvind Kulkarni",
+      "flights": [
+        {
+          "flight_number": "SK-118",
+          "route": "Mumbai \u2192 Bengaluru",
+          "date": "Wednesday, 23 September 2026",
+          "scheduled_departure": "07:10",
+          "status": "Delayed",
+          "cause": "Operational delay (airline-caused)",
+          "delay_hours": 4,
+          "new_departure": "11:10",
+          "leg": "outbound"
+        }
+      ]
+    },
+    {
+      "booking_reference": "WL7742",
+      "customer_id": "meher_kaur",
+      "customer_name": "Meher Kaur",
+      "flights": [
+        {
+          "flight_number": "SK-305",
+          "route": "Delhi \u2192 Hyderabad",
+          "date": "Wednesday, 23 September 2026",
+          "scheduled_departure": "14:00",
+          "status": "Delayed",
+          "cause": "Operational delay (airline-caused)",
+          "delay_hours": 6,
+          "new_departure": "20:00",
+          "leg": "outbound"
+        }
+      ]
+    }
+  ]
+}

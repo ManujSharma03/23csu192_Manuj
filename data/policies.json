@@ -1,0 +1,63 @@
+{
+  "cancellation_rebooking_rule": {
+    "name": "Cancellation Rebooking Rule",
+    "description": "If a flight is cancelled by the airline, the customer is entitled to a free rebooking on the next available flight within 24 hours, OR a full refund. Customer chooses.",
+    "options": [
+      "Free rebooking on the next available flight within 24 hours",
+      "Full refund"
+    ]
+  },
+  "delay_compensation_rule": {
+    "name": "Delay Compensation Rule",
+    "description": "Compensation for airline-caused delays scales with delay duration.",
+    "tiers": [
+      {
+        "condition": "delay < 3 hours",
+        "max_hours": 3,
+        "benefits": ["meal_voucher"]
+      },
+      {
+        "condition": "3 hours < delay <= 5 hours",
+        "min_hours_exclusive": 3,
+        "max_hours": 5,
+        "benefits": ["meal_voucher", "lounge_access"]
+      },
+      {
+        "condition": "delay > 5 hours",
+        "min_hours_exclusive": 5,
+        "benefits": ["meal_voucher", "lounge_access", "hotel_accommodation"]
+      }
+    ],
+    "meal_voucher_amount_inr": 500,
+    "hotel_note": "Hotel accommodation covers ONLY the delayed hours. It does NOT automatically mean a full night's stay."
+  },
+  "refund_rule": {
+    "name": "Refund Processing Rule",
+    "description": "For airline-caused cancellations, a full refund is processed within 7 business days to the original payment method only. Refunds to a different payment method are not permitted without escalation.",
+    "processing_days": 7,
+    "method": "original_payment_method_only"
+  },
+  "fare_difference_rule": {
+    "name": "Fare Difference Rule",
+    "description": "If a customer voluntarily chooses a higher-fare flight (not airline-caused), the customer pays the fare difference. Agents cannot waive fare differences above the authority threshold without supervisor approval.",
+    "agent_waiver_threshold_inr": 1500
+  },
+  "loyalty_tier_rule": {
+    "name": "Loyalty Tier Rule",
+    "description": "Gold and Platinum tier customers receive priority rebooking (first access to next-available seats). This does NOT provide additional compensation beyond standard policy.",
+    "priority_tiers": ["Gold", "Platinum"],
+    "additional_compensation": false
+  },
+  "escalation_triggers": {
+    "name": "Mandatory Escalation Conditions",
+    "conditions": [
+      "Compensation requested beyond stated policy",
+      "Fare difference waiver requested above agent authority threshold",
+      "Exception requested for a non-airline-caused disruption",
+      "Customer threatens legal action",
+      "Customer states intent to file a formal complaint",
+      "Refund requested to a different payment method",
+      "Any request requiring authority not present in supplied policy (e.g. upgrades)"
+    ]
+  }
+}
